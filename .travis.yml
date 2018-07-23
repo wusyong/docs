@@ -3,8 +3,16 @@ sudo: false
 language: ruby
 
 rvm:
-  - 2.3.3
   - 2.4.0
 
+env:
+  - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/ender503/slate.git
+
+branches:
+  only:
+    - master
+
 cache: bundler
-script: bundle exec middleman build
+script:
+  - bundle exec middleman build
+  - ./deploy.sh
