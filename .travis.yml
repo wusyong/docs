@@ -6,7 +6,7 @@ rvm:
   - 2.4.0
 
 env:
-  - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/ender503/slate.git
+  - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/PunchShadow/slate.git
 
 branches:
   only:
