@@ -276,6 +276,22 @@ html, body {
     z-index: 50;
     border-bottom: 5px solid $lang-select-active-bg;
   }
+
+  // Main photo size controll.
+  .mainSec{
+    max-height: 450px;
+    max-width: 100%;
+    width: calc(100% - $nav-width);
+    height: 400px;
+    overflow: hidden;
+
+  }
+
+  .main-photo {
+    width: 100%;
+    height: auto;
+    margin-top: -50px;
+  }
 }
 
 .lang-selector {
