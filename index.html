@@ -223,16 +223,19 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
+            <a href="#abstract" class="toc-h1 toc-link" data-title="Abstract">Abstract</a>
+          </li>
+          <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#identity" class="toc-h1 toc-link" data-title="Identity">Identity</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#iota-tangle" class="toc-h1 toc-link" data-title="IOTA/Tangle">IOTA/Tangle</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#tangleid" class="toc-h2 toc-link" data-title="TangleID">TangleID</a>
                   </li>
                   <li>
                     <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
@@ -256,23 +259,21 @@
         <div class="mainSec">
           <img src="images/taipie.png" class="main-photo" alt="Taipie" />
         </div>
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+        <h1 id='abstract'>Abstract</h1>
+<p>A decentralized identity application based on IOTA/Tangle allows identity authentication to be much more efficiently implemented. Traditional identity verifications are subjected to high cost and low reliability due to the existence of a trusted third party and its risk of hacking. TangleID proposes a solution to self-sovereign problem using tangle. Thus, entities storing their hashes on Google Cloud, Azure, AWS, Dropbox, etc., are able to update the information on their own and to control digital assets such as cryptocurrencies by interacting with Tangle network. To facilitate user-friendly operation, TangleID provides a mobile application for the end users to hold their private keys as well as numerical addresses. Also, TangleID uses off-tangle database storage for the information maintenance. As long as a identity is notarized, the information, reputation and digital assets released on TangleID are more likely to be reliable. TangleID, aiming to optimize the process of verification with the introduction of blockchain technology and simultaneously to meet users’ need by developing a mobile App, enables trust and convenience take place in the meantime whenever identity is required to be authenticated.</p>
+<h1 id='introduction'>Introduction</h1>
+<p>The emerge of blockchain technology triggers our imaginations and diverse applications of decentralized distributed ledgers. Ethereum, for example, takes good use of machine-to-machine(M2M) technology and distributed records to create trusts, which is well-known as “”Smart Contract.” However, the scopes of blockchain should be further broaden, extended and reach out to more fields. Current identity authentication, resulting from the centralized managements in whether real or virtual worlds, is also faced with great challenges and expects for the new transformation.
+TangleID can be the very solution to trust building by providing a secure, easy-to-use system for self-sovereign identity based on cryptographic mechanism called IOTA/Tangle. Normally, we get access to our asset management by the approval of centralized administration, which implies that verification process for the certificates can be constrained or time-consuming, and tend to sacrifice efficiency for security. However, the problems are amplified in cyberspace. More reliable trust mechanism is needed, and so is handy operation. TangleID allows each entity, such as citizen digital certificate, to have its unique identifier to manage digital assets if private key verified. In this case, the ownership of digital assets can be realized, and more excitingly, in decentralized method.
+By interacting with Tangle network, an identity storing its hash of an attributed data blob(e.g. Google Cloud, Azure, AWS, Dropbox, etc.) is able to be linked to offline data storage and update its files automatically, such as adding friends, modifying profiles and posting ephemeral (short time) photos. Particularly on blockchain, the features of immutability and transparency ensures the trust take place. In the acts, a set of “footprints” is inevitably left and reinforces the existence of the entity.<br>
+Moreover, the machine-to-machine (M2M) communication can dramatically decrease the transaction cost, whether during interview or for insurance. In this paper, we propose a more efficient solution to identity authentication using machine-to-machine verification based on IOTA/Tangle and further provide a path to self-sovereign identity in the digital world. In addition, since TangleID is involved in the digital asset management, we also develop a mobile application (APP) to enable users to keep their private keys as well as certain addresses as identifiers.</p>
+<h1 id='identity'>Identity</h1>
+<p>The concept of identity, also recognized as “I” of self-consciousness, exists worldwide and impacts every individual’s network; yet, identity authentication still encounters great challenges whether in real or virtual worlds due to the centralized system and the dilemma of trust-building. Modern society tends to authorize both nations and corporations to issue credentials, such as ID cards, vehicle licenses and certificates, to indicate one’s identity. Therefore, individual is exposed to the risk of losing his/ her identity if a state is suffered from social unrest or even if he/ she just crosses state borders.
+The centralized issue-mechanism also multiplies the difficulties of verifying identity because of the privacy concern. Moreover, the process of identity authentication is generally costly and time-consuming. For instance, from opening an account to savings and remittance, financial institutions put many efforts to verify the user identity to avoid frauds with the confirmation of credentials, seals and official bank statements. The same trivial process may repeat when a transaction takes place, such as real estate business or online buying. Also, insurance is another embarrassing situation. The calculation of compensation itself is complicated while the verification of the medical certificates is much more annoying.</p>
+<h1 id='iota-tangle'>IOTA/Tangle</h1>
+<p>The solution we propose majorly rely on IOTA. IOTA is a revolutionary new technology to utilize a next-generation public distributed ledger, which is called “Tangle.” This new data structure based on Directed Acyclic Graph(DAG) breaks the boundaries of blockchain, neither block nor chain to implement. On Tangle, if anyone wants to make a transaction, the proof of extra two transactions are required and these two transaction are not allowed to be conflict. In other words, entities on Tangle all get involved in system maintenance by verifying transactions while miners have no roles by computing nonce.</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2>
+<p><a href="https://lh5.googleusercontent.com/gRJabHPHz4-oPvgkyml_SYXVUQI-qEXwN08GcZ_JJjrtsoqT92yRhMcgMGDD92029lIhozeosqz7A0dbVuVzOrp2vdWhyLDXqqMr3ixr4OX0ccb1kQBaXSHgRP1oa_Cbjhp6EHxW=s800"></a></p>
+<h2 id='tangleid'>TangleID</h2>
 <p>This endpoint retrieves all kittens.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET http://example.com/api/kittens</code></p>
