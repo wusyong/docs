@@ -343,18 +343,64 @@ GDPR對區塊鏈衝擊
 <p>Create a new Identity or claim and then attach to Tangle:
 <img src="https://lh4.googleusercontent.com/8HCsm8nHsqzxL1pznBoiACRdF7g5_BYbw2M8TJF9ckThhTV68nLle9WdesrV4o8r-1UcCvTYRbedyRBwzM53pCMvRWHssFqea74NCgYtkE7uHxXTUeETXdHvVWEbpHgboFDBC_23=s800" alt="8hcsm8nhsqzxl1pznboiacrdf7g5 bybw2m8tjf9ckthhtv68nlle9wdesrv4o8r 1uccvtyrbedyrbwzm53pcmvrwhssfqea74ncgytke7uhxxtueetxdhvvwebphgbofdbc 23=s800" /></p>
 
-<p>| API Command  || Sample API usage                                 || Return value upon successful completion |
-|:------------:||--------------------------------------------------||:---------------------------------------:|
-| New Identity || curl http://node2.puyuma.org:8000 \              || 0                                       |
-|              ||  -X POST \                                       ||                                         |
-|              ||  -H &#39;Content-Type: application/json&#39; \           ||                                         |
-|              ||  -d &#39;{&quot;command&quot;:&quot;new_claim&quot;,                     ||                                         |
-|              || &quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;,\           ||                                         |
-|              || &quot;part_a&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\          ||                                         |
-|              || &quot;part_b&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\          ||                                         |
-|              || &quot;exp_date&quot;:&quot;20190101&quot;,\                          ||                                         |
-|              || &quot;claim_pic&quot;:&quot;https://i.imgur.com/fp0xb8q.png&quot;,\  ||                                         |
-|              || &quot;msg&quot;:&quot;testing message&quot;}&#39;                        ||                                         |</p>
+<table><thead>
+<tr>
+<th style="text-align: center">API Command</th>
+<th>Sample API usage</th>
+<th style="text-align: center">Return value upon successful completion</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">New Identity</td>
+<td>curl http://node2.puyuma.org:8000 \</td>
+<td style="text-align: center">0</td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+<td>-X POST \</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+<td>-H &#39;Content-Type: application/json&#39; \</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+<td>-d &#39;{&quot;command&quot;:&quot;new_claim&quot;,</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+<td>&quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;,\</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+<td>&quot;part_a&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+<td>&quot;part_b&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+<td>&quot;exp_date&quot;:&quot;20190101&quot;,\</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+<td>&quot;claim_pic&quot;:&quot;https://i.imgur.com/fp0xb8q.png&quot;,\</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+<td>&quot;msg&quot;:&quot;testing message&quot;}&#39;</td>
+<td style="text-align: center"></td>
+</tr>
+</tbody></table>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
