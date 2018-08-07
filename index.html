@@ -336,8 +336,8 @@ GDPR對區塊鏈衝擊
 <p>TangleID allows enterprises to establish a corporate identity; easily onboard new customers and employees; establish an improved and transitive Know-Your-Customer (KYC) process; build secure access-controlled environments with less friction for employees; reduce liability by not holding sensitive customer information; increase compliance; maintain a network of vendors; establish role-specific, actor-agnostic identities with specific permissions.</p>
 <h1 id='online-resources'>Online Resources</h1>
 <ul>
-<li>TangleID GitHub repository: https://github.com/TangleID</li>
-<li>All Restful API examples: https://github.com/yillkid/iota-swarm-node/tree/master/tests/tangleid</li>
+<li>TangleID GitHub repository: <a href="https://github.com/TangleID"></a></li>
+<li>All Restful API examples: <a href="https://github.com/yillkid/iota-swarm-node/tree/master/tests/tangleid"></a></li>
 </ul>
 <h1 id='essential-operations-in-tangleid'>Essential Operations in TangleID</h1><h2 id='new-identity-or-claim'>New Identity or Claim</h2>
 <p>Create a new Identity or claim and then attach to Tangle:
@@ -345,18 +345,17 @@ GDPR對區塊鏈衝擊
 
 <p>| Example                                                                                                   |
 | API Command  | Sample API usage                                 | Return value upon successful completion |
-| :---------:  | :----------------------------------------------: | :-------------------------------------: |
-| New Identity | curl http://node2.puyuma.org:8000 \              | 0
-|              |  -X POST \                                       |
-|              |  -H &#39;Content-Type: application/json&#39; \           |
-|              |  -d &#39;{&quot;command&quot;:&quot;new_claim&quot;,                     |
-|              | &quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;,\           |
-|              | &quot;part_a&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\          |
-|              | &quot;part_b&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\          |
-|              | &quot;exp_date&quot;:&quot;20190101&quot;,\                          |
-|              | &quot;claim_pic&quot;:&quot;https://i.imgur.com/fp0xb8q.png&quot;,\  |
-|              | &quot;msg&quot;:&quot;testing message&quot;}&#39;                        |
-| New Claims   |</p>
+|:------------:|:------------------------------------------------:|:---------------------------------------:|
+| New Identity | curl http://node2.puyuma.org:8000 \              | 0                                       |
+|              |  -X POST \                                       |                                         |
+|              |  -H &#39;Content-Type: application/json&#39; \           |                                         |
+|              |  -d &#39;{&quot;command&quot;:&quot;new_claim&quot;,                     |                                         |
+|              | &quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;,\           |                                         |
+|              | &quot;part_a&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\          |                                         |
+|              | &quot;part_b&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\          |                                         |
+|              | &quot;exp_date&quot;:&quot;20190101&quot;,\                          |                                         |
+|              | &quot;claim_pic&quot;:&quot;https://i.imgur.com/fp0xb8q.png&quot;,\  |                                         |
+|              | &quot;msg&quot;:&quot;testing message&quot;}&#39;                        |                                         |</p>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
