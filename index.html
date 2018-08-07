@@ -238,10 +238,29 @@
                     <a href="#tangleid" class="toc-h2 toc-link" data-title="TangleID">TangleID</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#new-claim-new-message-identity" class="toc-h2 toc-link" data-title="New claim/ New message (Identity, 足跡)">New claim/ New message (Identity, 足跡)</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#use-case" class="toc-h1 toc-link" data-title="Use Case">Use Case</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#end-user" class="toc-h2 toc-link" data-title="End-user">End-user</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#enterprise" class="toc-h2 toc-link" data-title="Enterprise">Enterprise</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#online-resources" class="toc-h1 toc-link" data-title="Online Resources">Online Resources</a>
+          </li>
+          <li>
+            <a href="#essential-operations-in-tangleid" class="toc-h1 toc-link" data-title="Essential Operations in TangleID">Essential Operations in TangleID</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#new-identity-or-claim" class="toc-h2 toc-link" data-title="New Identity or Claim">New Identity or Claim</a>
                   </li>
               </ul>
           </li>
@@ -299,67 +318,45 @@ GDPR對區塊鏈衝擊
 <div align="center">
 <img src="https://lh5.googleusercontent.com/P1nyVfqmNJMPlnfSHpy9aRk6u4BlA1vdTKK2LDkGAFVJ7ucI6RHQR3FmlrhrijmrpfYABCn743W5VCI6KlpSy5ow1O2FsrUU96BfqLEWd_858LbQrIUcGTrgfmq5hwsUFmTncdOK=s800" alt="P1nyvfqmnjmplnfshpy9ark6u4bla1vdtkk2ldkgafvj7uci6rhqr3fmlrhrijmrpfyabcn743w5vci6klpsy5ow1o2fsruu96bfqlewd 858lbqriucgtrgfmq5hwsufmtncdok=s800" />
 </div></p>
+<h2 id='new-claim-new-message-identity'>New claim/ New message (Identity, 足跡)</h2>
+<p>an identity storing its hash of an attributed data blob (e.g. Google Cloud, Azure, AWS, Dropbox, etc.) is able to be linked to offline data storage as well as update its files automatically, such as adding friends, modifying profiles and posting ephemeral (short time) photos. Particularly on blockchain, the features of immutability and transparency ensures the trust take place.</p>
 
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
+<p>Moreover, the machine-to-machine (M2M) communication can dramatically decrease the transaction cost, whether during interview or for insurance. In this paper, we propose a more efficient solution to identity authentication using machine-to-machine verification based on IOTA/Tangle and further provide a path to self-sovereign identity in the digital world. In addition, since TangleID is involved in the digital asset management, we also develop a mobile application (APP) to enable users to keep their private keys as well as certain addresses as identifiers.</p>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2>
-<p>This endpoint retrieves a specific kitten.</p>
+<p>The proof-of-work also solves the problem of determining representation in majority decision making. If the majority were based on one-IP-address-one-vote, it could be subverted by anyone able to allocate many IPs. Proof-of-work is essentially one-CPU-one-vote. The majority decision is represented by the longest chain, which has the greatest proof-of-work effort invested in it. If a majority of CPU power is controlled by honest nodes, the honest chain will grow the fastest and outpace any competing chains. To modify a past block, an attacker would have to redo the proof-of-work of the block and all blocks after it and then catch up with and surpass the work of the honest nodes. We will show later that the probability of a slower attacker catching up diminishes exponentially as subsequent blocks are added. To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they&#39;re generated too fast, the difficulty increases.</p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
+<p>TangleID is a secure, easy-to-use system for self-sovereign identity, built on IOTA/Tangle. An identity can be cryptographically linked to offline data stores. Each identity is capable of storing the hash of an attributed data blob, whether on Google Cloud, Azure, AWS, Dropbox, etc., which is where all data associated with that identity is securely stored.</p>
+
+<p>Identities are capable of updating this file themselves, such as adding a profile photo or a friend, or they can also grant others temporary permission to read or write specific files. Since they can interact with Tangle network, TangleID identities can also control digital assets such as cryptocurrencies or other tokenized assets.</p>
+
+<p>A mobile app holds the user&#39;s private key and a certain address acts as their identifier. We use a novel identity recovery mechanism to let the user select friends from their contact list which gives a quorum of these friends the ability to recover the identity of the user if their mobile device is lost.</p>
+<h1 id='use-case'>Use Case</h1><h2 id='end-user'>End-user</h2>
+<p>TangleID allows end-users to own and control their personal identity, reputation, data, and digital assets; securely and selectively disclose their data to counterparties; access digital services without using passwords; digitally sign claims, transactions, and documents; control and send value on a Tangle; interact with decentralized operation logic; and encrypt messages and data.</p>
+<h2 id='enterprise'>Enterprise</h2>
+<p>TangleID allows enterprises to establish a corporate identity; easily onboard new customers and employees; establish an improved and transitive Know-Your-Customer (KYC) process; build secure access-controlled environments with less friction for employees; reduce liability by not holding sensitive customer information; increase compliance; maintain a network of vendors; establish role-specific, actor-agnostic identities with specific permissions.</p>
+<h1 id='online-resources'>Online Resources</h1>
+<ul>
+<li>TangleID GitHub repository: https://github.com/TangleID</li>
+<li>All Restful API examples: https://github.com/yillkid/iota-swarm-node/tree/master/tests/tangleid</li>
+</ul>
+<h1 id='essential-operations-in-tangleid'>Essential Operations in TangleID</h1><h2 id='new-identity-or-claim'>New Identity or Claim</h2>
+<p>Create a new Identity or claim and then attach to Tangle:
+<img src="https://lh4.googleusercontent.com/8HCsm8nHsqzxL1pznBoiACRdF7g5_BYbw2M8TJF9ckThhTV68nLle9WdesrV4o8r-1UcCvTYRbedyRBwzM53pCMvRWHssFqea74NCgYtkE7uHxXTUeETXdHvVWEbpHgboFDBC_23=s800" alt="8hcsm8nhsqzxl1pznboiacrdf7g5 bybw2m8tjf9ckthhtv68nlle9wdesrv4o8r 1uccvtyrbedyrbwzm53pcmvrwhssfqea74ncgytke7uhxxtueetxdhvvwebphgbofdbc 23=s800" /></p>
+
+<p>| Example                                                                                                   |
+| API Command  | Sample API usage                                 | Return value upon successful completion |
+| :---------:  | :----------------------------------------------: | :-------------------------------------: |
+| New Identity | curl http://node2.puyuma.org:8000 \              | 0
+|              |  -X POST \                                       |
+|              |  -H &#39;Content-Type: application/json&#39; \           |
+|              |  -d &#39;{&quot;command&quot;:&quot;new_claim&quot;,                     |
+|              | &quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;,\           |
+|              | &quot;part_a&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\          |
+|              | &quot;part_b&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\          |
+|              | &quot;exp_date&quot;:&quot;20190101&quot;,\                          |
+|              | &quot;claim_pic&quot;:&quot;https://i.imgur.com/fp0xb8q.png&quot;,\  |
+|              | &quot;msg&quot;:&quot;testing message&quot;}&#39;                        |
+| New Claims   |</p>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
