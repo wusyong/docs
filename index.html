@@ -418,7 +418,7 @@ API usage and flow for recover an identity when private key is lost, described a
 <p>Here is a sample application to demonstrate how a claim is associated to an identity. We assume a Bank plan to  issue a certification to John so that he can self-sovereign anywhere. The relationship is illustrated as following:
 <img src="https://lh6.googleusercontent.com/dny46yq5aS4J4Idk5GX40cuK1i9izccdNpiGCv3oTfL6ZpS05nRXW5o-L2Gt8n-k2x9Jsi3i0uDhyEkQ3eoiB6FP_2yNnF7GnzvvZxrhcUdmqGG7Qye3geaHQKuUZ9onjyPvoKJs=s800" alt="Dny46yq5as4j4idk5gx40cuk1i9izccdnpigcv3otfl6zps05nrxw5o l2gt8n k2x9jsi3i0udhyekq3eoib6fp 2ynnf7gnzvvzxrhcudmqgg7qye3geahqkuuz9onjypvokjs=s800" /></p>
 
-<p><code></p>
+<blockquote>
 <h1 id='bin-bash'>!/bin/bash</h1>
 <p>TANGLEID_HOST=&quot;http://node2.puyuma.org:8000&quot;
 UUID=&quot;KD9BCRDGJYWDHPTDNOPRULFWWG&quot;
@@ -441,9 +441,10 @@ echo &quot;List all John&#39;s claims:&quot;
 curl $TANGLEID_HOST \
  -X POST \
  -H &#39;Content-Type: application/json&#39; \
- -d &#39;{&quot;command&quot;:&quot;get_all_claims&quot;,&quot;uuid&quot;: &quot;&#39;$UUID&#39;&quot;}&#39;
-</code>
-Reference result:
+ -d &#39;{&quot;command&quot;:&quot;get_all_claims&quot;,&quot;uuid&quot;: &quot;&#39;$UUID&#39;&quot;}&#39;</p>
+</blockquote>
+
+<p>Reference result:
 <code>[&quot;OTSQDZSFDDERAADSBBTJKZGZXDT9HPMTDYPRSYJGQGCHCZRPJUEVUEFW9EUZKS9QTAGVXLCCXBRBZ9999&quot;]</code></p>
 
 <p>Since the new claim exists in the form of a valid IOTA transaction, we can look up the claim transaction via IOTA Explorer.
