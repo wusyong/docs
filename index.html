@@ -349,17 +349,30 @@ GDPR對區塊鏈衝擊
 <h1 id='online-resources'>Online Resources</h1>
 <ul>
 <li>TangleID GitHub repository: <a href="https://github.com/TangleID">https://github.com/TangleID</a></li>
-<li>All Restful API examples: <a href="https://github.com/yillkid/iota-swarm-node/tree/master/tests/tangleid">https://github.com/TangleID</a> </li>
+<li>All Restful API examples: <a href="https://github.com/yillkid/iota-swarm-node/tree/master/tests/tangleid">https://github.com/TangleID</a></li>
 </ul>
 <h1 id='essential-operations-in-tangleid'>Essential Operations in TangleID</h1><h2 id='new-identity-or-claim'>New Identity or Claim</h2>
 <p>Create a new Identity or claim and then attach to Tangle:
 <img src="https://lh4.googleusercontent.com/8HCsm8nHsqzxL1pznBoiACRdF7g5_BYbw2M8TJF9ckThhTV68nLle9WdesrV4o8r-1UcCvTYRbedyRBwzM53pCMvRWHssFqea74NCgYtkE7uHxXTUeETXdHvVWEbpHgboFDBC_23=s800" alt="8hcsm8nhsqzxl1pznboiacrdf7g5 bybw2m8tjf9ckthhtv68nlle9wdesrv4o8r 1uccvtyrbedyrbwzm53pcmvrwhssfqea74ncgytke7uhxxtueetxdhvvwebphgbofdbc 23=s800" /></p>
 
-<p>Example:
-| API Command  |              Sample API usage                    | Return value upon successful completion |
-|:------------:|--------------------------------------------------|:---------------------------------------:|
-| New Identity | curl http://node2.puyuma.org:8000 \ <br> -X POST \ <br> -H &#39;Content-Type: application/json&#39; \ <br> -d &#39;{&quot;command&quot;:&quot;new_claim&quot;, <br> &quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;,\ <br> &quot;part_a&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\ <br> &quot;part_b&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\ <br> &quot;exp_date&quot;:&quot;20190101&quot;,\ <br> &quot;claim_pic&quot;:&quot;https://i.imgur.com/fp0xb8q.png&quot;,\ <br> &quot;msg&quot;:&quot;testing message&quot;}&#39;|0|
-| New Claims | curl http://node2.puyuma.org:8000 \ <br> -X POST \ <br> -H &#39;Content-Type: application/json&#39; \ <br> -d &#39;{&quot;command&quot;:&quot;new_claim&quot;,\ <br> &quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;,\ <br> &quot;part_a&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\ <br> &quot;part_b&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\ <br> &quot;exp_date&quot;:&quot;20190101&quot;,\ <br> &quot;claim_pic&quot;:&quot;https://i.imgur.com/fp0xb8q.png&quot;,\ <br> &quot;msg&quot;:&quot;testing message&quot;}&#39; | 0 |</p>
+<table><thead>
+<tr>
+<th style="text-align: center">API Command</th>
+<th>Sample API usage</th>
+<th style="text-align: center">Return value upon successful completion</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">New Identity</td>
+<td>curl http://node2.puyuma.org:8000 \ <br> -X POST \ <br> -H &#39;Content-Type: application/json&#39; \ <br> -d &#39;{&quot;command&quot;:&quot;new_claim&quot;, <br> &quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;,\ <br> &quot;part_a&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\ <br> &quot;part_b&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\ <br> &quot;exp_date&quot;:&quot;20190101&quot;,\ <br> &quot;claim_pic&quot;:&quot;https://i.imgur.com/fp0xb8q.png&quot;,\ <br> &quot;msg&quot;:&quot;testing message&quot;}&#39;</td>
+<td style="text-align: center">0</td>
+</tr>
+<tr>
+<td style="text-align: center">New Claims</td>
+<td>curl http://node2.puyuma.org:8000 \ <br> -X POST \ <br> -H &#39;Content-Type: application/json&#39; \ <br> -d &#39;{&quot;command&quot;:&quot;new_claim&quot;,\ <br> &quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;,\ <br> &quot;part_a&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\ <br> &quot;part_b&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\ <br> &quot;exp_date&quot;:&quot;20190101&quot;,\ <br> &quot;claim_pic&quot;:&quot;https://i.imgur.com/fp0xb8q.png&quot;,\ <br> &quot;msg&quot;:&quot;testing message&quot;}&#39;</td>
+<td style="text-align: center">0</td>
+</tr>
+</tbody></table>
 <h2 id='recovery-process-when-identity-key-is-lost'>Recovery process when identity key is lost</h2>
 <p>We shall designate 2 co-signers when a new identity is issued, and the co-signer will help to recover all claims when an identity lost its private key. The whole scenario is illustrated as following:
 <img src="https://lh6.googleusercontent.com/LzIGU6sKQ505n6WFQSM0JKdycqlGmUHO1-s2nhb8N7d-4n67Uq7mPKsCpoJ-b2ACkjuSaUKEGGvBuWuPCE17xWiYmzJgdOJZJmKJT9Z0uzhJMqVgI6b7XxOm1BVKaqiaGmwlNQzc=s800" alt="Lzigu6skq505n6wfqsm0jkdycqlgmuho1 s2nhb8n7d 4n67uq7mpkscpoj b2ackjusaukeggvbuwupce17xwiymzjgdojzjmkjt9z0uzhjmqvgi6b7xxom1bvkaqiagmwlnqzc=s800" />
@@ -374,11 +387,26 @@ API usage and flow for recover an identity when private key is lost, described a
 <p>Fetch Identities or claims from Tangle:
 <img src="https://lh4.googleusercontent.com/yilmurT7iJSbP0MGNwACi7pjadj96662bGamJo2ezClB79H7o58k3ShPBZPi8irpVw_GLe3G5PrSXrXwzC8wxEAk0l5s6dCtOR7UuTUBpu8z1D_nxafCp-Rlg5XxMq0Pp3i2aw3P=s800" alt="Yilmurt7ijsbp0mgnwaci7pjadj96662bgamjo2ezclb79h7o58k3shpbzpi8irpvw gle3g5prsxrxwzc8wxeak0l5s6dctor7uutubpu8z1d nxafcp rlg5xxmq0pp3i2aw3p=s800" /></p>
 
-<p>Example:
-| API Command        |                   Sample code                           | Return value upon successful completion |
-|:------------------:|---------------------------------------------------------|:---------------------------------------:|
-| Fetch Claims       | curl http://node2.puyuma.org:8000 \ <br> -X POST \ <br> -H &#39;Content-Type: application/json&#39; \ <br> -d &#39;{&quot;command&quot;:&quot;get_all_claims&quot;, \ <br> &quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;}&#39; | 0 |
-| Fetch Claims Info. | curl http://node2.puyuma.org:8000 \ <br>-X POST \ <br> -H &#39;Content-Type: application/json&#39; \ <br> -d &#39;{&quot;command&quot;:&quot;get_claim_info&quot;, \ <br> &quot;hash_txn&quot;:&quot;DHPRSUKQDEOWFUBWBHVFRQWMOKLNI9OIHKRKZPIXLLKVENBUYIJGUWQXUNUQGEFKXXMVRVNHRKZI99999&quot;}&#39; | 0 |</p>
+<p>Example:</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">API Command</th>
+<th>Sample code</th>
+<th style="text-align: center">Return value upon successful completion</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">Fetch Claims</td>
+<td>curl http://node2.puyuma.org:8000 \ <br> -X POST \ <br> -H &#39;Content-Type: application/json&#39; \ <br> -d &#39;{&quot;command&quot;:&quot;get_all_claims&quot;, \ <br> &quot;uuid&quot;: &quot;SD9BCRDGJYWDHPTDNOPRULFWWG&quot;}&#39;</td>
+<td style="text-align: center">0</td>
+</tr>
+<tr>
+<td style="text-align: center">Fetch Claims Info.</td>
+<td>curl http://node2.puyuma.org:8000 \ <br>-X POST \ <br> -H &#39;Content-Type: application/json&#39; \ <br> -d &#39;{&quot;command&quot;:&quot;get_claim_info&quot;, \ <br> &quot;hash_txn&quot;:&quot;DHPRSUKQDEOWFUBWBHVFRQWMOKLNI9OIHKRKZPIXLLKVENBUYIJGUWQXUNUQGEFKXXMVRVNHRKZI99999&quot;}&#39;</td>
+<td style="text-align: center">0</td>
+</tr>
+</tbody></table>
 <h1 id='sample-application-using-tangleid'>Sample Application using TangleID</h1>
 <p>Here is a sample application to demonstrate how a claim is associated to an identity. We assume a Bank plan to  issue a certification to John so that he can self-sovereign anywhere. The relationship is illustrated as following:
 <img src="https://lh6.googleusercontent.com/dny46yq5aS4J4Idk5GX40cuK1i9izccdNpiGCv3oTfL6ZpS05nRXW5o-L2Gt8n-k2x9Jsi3i0uDhyEkQ3eoiB6FP_2yNnF7GnzvvZxrhcUdmqGG7Qye3geaHQKuUZ9onjyPvoKJs=s800" alt="Dny46yq5as4j4idk5gx40cuk1i9izccdnpigcv3otfl6zps05nrxw5o l2gt8n k2x9jsi3i0udhyekq3eoib6fp 2ynnf7gnzvvzxrhcudmqgg7qye3geahqkuuz9onjypvokjs=s800" />
