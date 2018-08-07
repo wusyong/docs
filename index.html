@@ -274,6 +274,9 @@
             <a href="#sample-application-using-tangleid" class="toc-h1 toc-link" data-title="Sample Application using TangleID">Sample Application using TangleID</a>
           </li>
           <li>
+            <a href="#bin-bash" class="toc-h1 toc-link" data-title="!/bin/bash">!/bin/bash</a>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -415,32 +418,34 @@ API usage and flow for recover an identity when private key is lost, described a
 <h1 id='sample-application-using-tangleid'>Sample Application using TangleID</h1>
 <p>Here is a sample application to demonstrate how a claim is associated to an identity. We assume a Bank plan to  issue a certification to John so that he can self-sovereign anywhere. The relationship is illustrated as following:
 <img src="https://lh6.googleusercontent.com/dny46yq5aS4J4Idk5GX40cuK1i9izccdNpiGCv3oTfL6ZpS05nRXW5o-L2Gt8n-k2x9Jsi3i0uDhyEkQ3eoiB6FP_2yNnF7GnzvvZxrhcUdmqGG7Qye3geaHQKuUZ9onjyPvoKJs=s800" alt="Dny46yq5as4j4idk5gx40cuk1i9izccdnpigcv3otfl6zps05nrxw5o l2gt8n k2x9jsi3i0udhyekq3eoib6fp 2ynnf7gnzvvzxrhcudmqgg7qye3geahqkuuz9onjypvokjs=s800" /></p>
-<pre class="highlight shell tab-shell"><code><span class="c">#!/bin/bash</span>
-<span class="nv">TANGLEID_HOST</span><span class="o">=</span><span class="s2">"http://node2.puyuma.org:8000"</span>
-<span class="nv">UUID</span><span class="o">=</span><span class="s2">"KD9BCRDGJYWDHPTDNOPRULFWWG"</span>
-<span class="nb">echo</span> <span class="s2">"Issue a new claim for John"</span>
-<span class="nv">result_new_claim</span><span class="o">=</span><span class="sb">`</span>curl <span class="nv">$TANGLEID_HOST</span> <span class="se">\</span>
- -X POST <span class="se">\</span>
- -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
- -d <span class="s1">'{"command":"new_claim","uuid": "'</span><span class="nv">$UUID</span><span class="s1">'",\
-       "part_a":"9JVXCXMFAMKLUQQCDACSWJVDLH",\
-        "part_b":"9JVXCXMFAMKLUQQCDACSWJVDLH",\
-        "exp_date":"20190101",\
-        "claim_pic":"http://node0.puyuma.org/tmp/cer.jpg",\
-        "msg":"A sample certification demonstration"}'</span><span class="sb">`</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$result_new_claim</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"0"</span> <span class="o">]</span>; <span class="k">then
-    </span><span class="nb">echo</span> <span class="s2">"Succeed to make a new claim."</span>
-<span class="k">else
-    </span><span class="nb">echo</span> <span class="s2">"Fail to make a new claim."</span>
-<span class="k">fi
-</span><span class="nb">echo</span> <span class="s2">"List all John's claims:"</span>
-curl <span class="nv">$TANGLEID_HOST</span> <span class="se">\</span>
- -X POST <span class="se">\</span>
- -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
- -d <span class="s1">'{"command":"get_all_claims","uuid": "'</span><span class="nv">$UUID</span><span class="s1">'"}'</span>
-</code></pre>
-<p>Reference result:
-<code>[&quot;OTSQDZSFDDERAADSBBTJKZGZXDT9HPMTDYPRSYJGQGCHCZRPJUEVUEFW9EUZKS9QTAGVXLCCXBRBZ9999&quot;]</code></p>
+
+<p>`</p>
+<h1 id='bin-bash'>!/bin/bash</h1>
+<p>TANGLEID_HOST=&quot;http://node2.puyuma.org:8000&quot;
+UUID=&quot;KD9BCRDGJYWDHPTDNOPRULFWWG&quot;
+echo &quot;Issue a new claim for John&quot;
+result_new_claim=<code>curl $TANGLEID_HOST \
+ -X POST \
+ -H &#39;Content-Type: application/json&#39; \
+ -d &#39;{&quot;command&quot;:&quot;new_claim&quot;,&quot;uuid&quot;: &quot;&#39;$UUID&#39;&quot;,\
+       &quot;part_a&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\
+        &quot;part_b&quot;:&quot;9JVXCXMFAMKLUQQCDACSWJVDLH&quot;,\
+        &quot;exp_date&quot;:&quot;20190101&quot;,\
+        &quot;claim_pic&quot;:&quot;http://node0.puyuma.org/tmp/cer.jpg&quot;,\
+        &quot;msg&quot;:&quot;A sample certification demonstration&quot;}&#39;</code>
+if [ &quot;$result_new_claim&quot; == &quot;0&quot; ]; then
+    echo &quot;Succeed to make a new claim.&quot;
+else
+    echo &quot;Fail to make a new claim.&quot;
+fi
+echo &quot;List all John&#39;s claims:&quot;
+curl $TANGLEID_HOST \
+ -X POST \
+ -H &#39;Content-Type: application/json&#39; \
+ -d &#39;{&quot;command&quot;:&quot;get_all_claims&quot;,&quot;uuid&quot;: &quot;&#39;$UUID&#39;&quot;}&#39;
+<code>
+Reference result:
+</code>[&quot;OTSQDZSFDDERAADSBBTJKZGZXDT9HPMTDYPRSYJGQGCHCZRPJUEVUEFW9EUZKS9QTAGVXLCCXBRBZ9999&quot;]`</p>
 
 <p>Since the new claim exists in the form of a valid IOTA transaction, we can look up the claim transaction via IOTA Explorer.
 Here is an example of a pre-issued identity stored in the form of claim transaction. Once the transaction hash is obtained from applications, IOTA Explorer can browse its details.
