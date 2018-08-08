@@ -282,7 +282,7 @@ html, body {
     max-height: 450px;
     max-width: 100%;
     width: calc(100% - $nav-width);
-    height: 400px;
+    height: 430px;
     overflow: hidden;
 
   }
@@ -525,7 +525,7 @@ html, body {
 // CODE SAMPLE STYLES
 ////////////////////////////////////////////////////////////////////////////////
 // This is all the stuff that appears in the right half of the page
-
+/*
 .content {
   pre, blockquote {
     background-color: $code-bg;
@@ -565,7 +565,7 @@ html, body {
     }
   }
 }
-
+*/
 ////////////////////////////////////////////////////////////////////////////////
 // RESPONSIVE DESIGN
 ////////////////////////////////////////////////////////////////////////////////
