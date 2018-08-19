@@ -44,10 +44,6 @@ The solution we propose majorly rely on IOTA. IOTA is a revolutionary new techno
 
 With the Tangle-based technology, TangleID combines decentralized application(DAPP) and API service to implement self-verification by distributed, reliable, and immutable mechanics. Surprisingly, such as TCP/IP protocols and websites, this innovative solution brings no change on our habits but merely makes improvements on the underlying technology.
 
-<div align="center">
-![](https://lh5.googleusercontent.com/P1nyVfqmNJMPlnfSHpy9aRk6u4BlA1vdTKK2LDkGAFVJ7ucI6RHQR3FmlrhrijmrpfYABCn743W5VCI6KlpSy5ow1O2FsrUU96BfqLEWd_858LbQrIUcGTrgfmq5hwsUFmTncdOK=s800)
-</div>
-
 ## New claim
 
   An identity storing its hash of an attributed data blob (e.g. Google Cloud, Azure, AWS, Dropbox, etc.) is able to be linked to offline data storage as well as update its files automatically, such as adding friends, modifying profiles and posting ephemeral (short time) photos. Particularly on blockchain, the features of immutability and transparency ensures the trust take place.
@@ -76,7 +72,7 @@ TangleID allows enterprises to establish a corporate identity; easily onboard ne
 # Online Resources
 
 * TangleID GitHub repository: [https://github.com/TangleID](https://github.com/TangleID)
-* All Restful API examples: [https://github.com/TangleID](https://github.com/yillkid/iota-swarm-node/tree/master/tests/tangleid)
+* REST API examples: [tangleid-api-examples](https://github.com/TangleID/tangleid-api-examples)
 
 # Essential Operations in TangleID
 
