@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>TangleID</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -209,7 +209,7 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <!-- <img src="images/logo.png" class="logo" alt="Logo" /> -->
+      <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="ruby">ruby</a>
               <a href="#" data-language-name="python">python</a>
@@ -237,7 +237,7 @@
                     <a href="#tangleid" class="toc-h2 toc-link" data-title="TangleID">TangleID</a>
                   </li>
                   <li>
-                    <a href="#new-claim" class="toc-h2 toc-link" data-title="New claim">New claim</a>
+                    <a href="#new-claim-new-message-identity" class="toc-h2 toc-link" data-title="New claim/ New message (Identity, 足跡)">New claim/ New message (Identity, 足跡)</a>
                   </li>
               </ul>
           </li>
@@ -277,6 +277,7 @@
           </li>
       </ul>
         <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -286,7 +287,7 @@
           <img src="images/taipei101.jpg" class="main-photo" alt="Taipei101" />
         </div>
         <h1 id='abstract'>Abstract</h1>
-<p><a href="https://github.com/TangleID">TangleID</a> is a decentralized identity application based on IOTA/Tangle allowing identity authentication to be much more efficiently implemented. Traditional identity verifications are subjected to high cost and low reliability due to the existence of a trusted third party and its risk of hacking. TangleID proposes a solution to self-sovereign problem using tangle. Thus, entities storing their hashes on Google Cloud, Azure, AWS, Dropbox, etc., are able to update the information on their own and to control digital assets such as cryptocurrencies by interacting with Tangle network. To facilitate user-friendly operation, TangleID provides a mobile application for the end users to hold their private keys as well as numerical addresses. Also, TangleID uses off-tangle database storage for the information maintenance. As long as a identity is notarized, the information, reputation and digital assets released on TangleID are more likely to be reliable. TangleID, aiming to optimize the process of verification with the introduction of blockchain technology and simultaneously to meet users’ need by developing a mobile App, enables trust and convenience take place in the meantime whenever identity is required to be authenticated.</p>
+<p>A decentralized identity application based on IOTA/Tangle allows identity authentication to be much more efficiently implemented. Traditional identity verifications are subjected to high cost and low reliability due to the existence of a trusted third party and its risk of hacking. TangleID proposes a solution to self-sovereign problem using tangle. Thus, entities storing their hashes on Google Cloud, Azure, AWS, Dropbox, etc., are able to update the information on their own and to control digital assets such as cryptocurrencies by interacting with Tangle network. To facilitate user-friendly operation, TangleID provides a mobile application for the end users to hold their private keys as well as numerical addresses. Also, TangleID uses off-tangle database storage for the information maintenance. As long as a identity is notarized, the information, reputation and digital assets released on TangleID are more likely to be reliable. TangleID, aiming to optimize the process of verification with the introduction of blockchain technology and simultaneously to meet users’ need by developing a mobile App, enables trust and convenience take place in the meantime whenever identity is required to be authenticated.</p>
 <h1 id='introduction'>Introduction</h1>
 <p>The emerge of blockchain technology triggers our imaginations and diverse applications of decentralized distributed ledgers. Ethereum, for example, takes good use of machine-to-machine(M2M) technology and distributed records to create trusts, which is well-known as “”Smart Contract.” However, the scopes of blockchain should be further broaden, extended and reach out to more fields. Current identity authentication, resulting from the centralized managements in whether real or virtual worlds, is also faced with great challenges and expects for the new transformation.
 TangleID can be the very solution to trust building by providing a secure, easy-to-use system for self-sovereign identity based on cryptographic mechanism called IOTA/Tangle. Normally, we get access to our asset management by the approval of centralized administration, which implies that verification process for the certificates can be constrained or time-consuming, and tend to sacrifice efficiency for security. However, the problems are amplified in cyberspace. More reliable trust mechanism is needed, and so is handy operation. TangleID allows each entity, such as citizen digital certificate, to have its unique identifier to manage digital assets if private key verified. In this case, the ownership of digital assets can be realized, and more excitingly, in decentralized method.
@@ -302,8 +303,31 @@ The centralized issue-mechanism also multiplies the difficulties of verifying id
 </p></p>
 <h2 id='tangleid'>TangleID</h2>
 <p>With the Tangle-based technology, TangleID combines decentralized application(DAPP) and API service to implement self-verification by distributed, reliable, and immutable mechanics. Surprisingly, such as TCP/IP protocols and websites, this innovative solution brings no change on our habits but merely makes improvements on the underlying technology.</p>
-<h2 id='new-claim'>New claim</h2>
-<p>An identity storing its hash of an attributed data blob (e.g. Google Cloud, Azure, AWS, Dropbox, etc.) is able to be linked to offline data storage as well as update its files automatically, such as adding friends, modifying profiles and posting ephemeral (short time) photos. Particularly on blockchain, the features of immutability and transparency ensures the trust take place.</p>
+
+<ol>
+<li>DAPP</li>
+<li>API: (1)規範化Well-formed (2)工程優化re-attach/GPU加速/Multi-thread POW(目前是單功) operation (3)加密Mesaage: Source Code(MAM: 不是每個Node)</li>
+<li>Tangle</li>
+<li>Case</li>
+</ol>
+
+<p>W3C網頁打開基於規範化
+Claim
+Revoke(Claim)
+private key is lost &amp; Recovery
+incentive
+*
+GDPR對區塊鏈衝擊
+1. 跨境傳輸：上傳內容是Hash Value
+2. 被遺忘權：技術上可做到
+改善痛點：資料可追溯姓
+1. 資料可攜權Data Protability
+2. 個人資料外洩通報Data Breach Notification
+<div align="center">
+<img src="https://lh5.googleusercontent.com/P1nyVfqmNJMPlnfSHpy9aRk6u4BlA1vdTKK2LDkGAFVJ7ucI6RHQR3FmlrhrijmrpfYABCn743W5VCI6KlpSy5ow1O2FsrUU96BfqLEWd_858LbQrIUcGTrgfmq5hwsUFmTncdOK=s800" alt="P1nyvfqmnjmplnfshpy9ark6u4bla1vdtkk2ldkgafvj7uci6rhqr3fmlrhrijmrpfyabcn743w5vci6klpsy5ow1o2fsruu96bfqlewd 858lbqriucgtrgfmq5hwsufmtncdok=s800" />
+</div></p>
+<h2 id='new-claim-new-message-identity'>New claim/ New message (Identity, 足跡)</h2>
+<p>an identity storing its hash of an attributed data blob (e.g. Google Cloud, Azure, AWS, Dropbox, etc.) is able to be linked to offline data storage as well as update its files automatically, such as adding friends, modifying profiles and posting ephemeral (short time) photos. Particularly on blockchain, the features of immutability and transparency ensures the trust take place.</p>
 
 <p>Moreover, the machine-to-machine (M2M) communication can dramatically decrease the transaction cost, whether during interview or for insurance. In this paper, we propose a more efficient solution to identity authentication using machine-to-machine verification based on IOTA/Tangle and further provide a path to self-sovereign identity in the digital world. In addition, since TangleID is involved in the digital asset management, we also develop a mobile application (APP) to enable users to keep their private keys as well as certain addresses as identifiers.</p>
 
@@ -321,7 +345,7 @@ The centralized issue-mechanism also multiplies the difficulties of verifying id
 <h1 id='online-resources'>Online Resources</h1>
 <ul>
 <li>TangleID GitHub repository: <a href="https://github.com/TangleID">https://github.com/TangleID</a></li>
-<li>REST API examples: <a href="https://github.com/TangleID/tangleid-api-examples">tangleid-api-examples</a></li>
+<li>All Restful API examples: <a href="https://github.com/yillkid/iota-swarm-node/tree/master/tests/tangleid">https://github.com/TangleID</a></li>
 </ul>
 <h1 id='essential-operations-in-tangleid'>Essential Operations in TangleID</h1><h2 id='new-identity-or-claim'>New Identity or Claim</h2>
 <p>Create a new Identity or claim and then attach to Tangle:
