@@ -6,11 +6,11 @@ rvm:
   - 2.4.0
 
 env:
-  - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/TangleID/slate.git
+  - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/TangleID/TangleID.github.io.git
 
 branches:
   only:
-    - master
+    - develop
 
 cache: bundler
 script:
