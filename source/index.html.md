@@ -73,7 +73,7 @@ TangleID allows enterprises to establish a corporate identity; easily onboard ne
 * TangleID GitHub repository: [https://github.com/TangleID](https://github.com/TangleID)
 * REST API examples: [tangleid-api-examples](https://github.com/TangleID/tangleid-api-examples)
 
-# Essential Operations in TangleID
+# Essential Operations
 
 ## New Identity or Claim
 
@@ -86,7 +86,7 @@ Create a new Identity or claim and then attach to Tangle:
 | New Identity | curl http://node2.puyuma.org:8000 \ <br> -X POST \ <br> -H 'Content-Type: application/json' \ <br> -d '{"command":"new_claim", <br> "uuid": "SD9BCRDGJYWDHPTDNOPRULFWWG",\ <br> "part_a":"9JVXCXMFAMKLUQQCDACSWJVDLH",\ <br> "part_b":"9JVXCXMFAMKLUQQCDACSWJVDLH",\ <br> "exp_date":"20190101",\ <br> "claim_pic":"https://i.imgur.com/fp0xb8q.png",\ <br> "msg":"testing message"}'|0|
 | New Claims | curl http://node2.puyuma.org:8000 \ <br> -X POST \ <br> -H 'Content-Type: application/json' \ <br> -d '{"command":"new_claim",\ <br> "uuid": "SD9BCRDGJYWDHPTDNOPRULFWWG",\ <br> "part_a":"9JVXCXMFAMKLUQQCDACSWJVDLH",\ <br> "part_b":"9JVXCXMFAMKLUQQCDACSWJVDLH",\ <br> "exp_date":"20190101",\ <br> "claim_pic":"https://i.imgur.com/fp0xb8q.png",\ <br> "msg":"testing message"}' | 0 |
 
-## Recovery process when identity key is lost
+## Recovery process
 
 We shall designate 2 co-signers when a new identity is issued, and the co-signer will help to recover all claims when an identity lost its private key. The whole scenario is illustrated as following:
 <div width="50px", height="30px", align="center">
@@ -111,7 +111,7 @@ Fetch Identities or claims from Tangle:
 | Fetch Claims       | curl http://node2.puyuma.org:8000 \ <br> -X POST \ <br> -H 'Content-Type: application/json' \ <br> -d '{"command":"get_all_claims", \ <br> "uuid": "SD9BCRDGJYWDHPTDNOPRULFWWG"}' | 0 |
 | Fetch Claims Info. | curl http://node2.puyuma.org:8000 \ <br>-X POST \ <br> -H 'Content-Type: application/json' \ <br> -d '{"command":"get_claim_info", \ <br> "hash_txn":"DHPRSUKQDEOWFUBWBHVFRQWMOKLNI9OIHKRKZPIXLLKVENBUYIJGUWQXUNUQGEFKXXMVRVNHRKZI99999"}' | 0 |
 
-# Sample Application using TangleID
+# Sample Application
 
 Here is a sample application to demonstrate how a claim is associated to an identity. We assume a Bank plan to  issue a certification to John so that he can self-sovereign anywhere. The relationship is illustrated as following:
 ![](https://lh6.googleusercontent.com/dny46yq5aS4J4Idk5GX40cuK1i9izccdNpiGCv3oTfL6ZpS05nRXW5o-L2Gt8n-k2x9Jsi3i0uDhyEkQ3eoiB6FP_2yNnF7GnzvvZxrhcUdmqGG7Qye3geaHQKuUZ9onjyPvoKJs=s800)
