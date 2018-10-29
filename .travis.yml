@@ -14,5 +14,4 @@ branches:
 
 cache: bundler
 script:
-  - bundle exec middleman build
-  - ./deploy.sh
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./deploy-ci.sh; fi'
